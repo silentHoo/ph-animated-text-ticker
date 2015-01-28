@@ -27,7 +27,7 @@ Import the component by adding this to your HTML file:
 
 `<link rel="import" href="components/ph-animated-text-ticker/ph-animated-text-ticker.html">`
 
-## 3. Use
+## 3. Use / Demo
 
 See the [component page](http://silentHoo.github.io/ph-animated-text-ticker) for more information.
 
