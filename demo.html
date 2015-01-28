@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>ph-animated-text-ticker Demo</title>
+
+  <script src="../webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="ph-animated-text-ticker.html">
+
+  <style>
+    ph-animated-text-ticker {
+      background-color: #eaeaea;
+    }
+
+    .small {
+      width: 300px;
+    }
+
+    .medium {
+      width: 500px;
+    }
+
+    .big {
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body unresolved>
+
+  <p>An `ph-animated-text-ticker` looks like this:</p>
+
+  <h4>Please note the different animation speed in the different areas!</h4>
+
+  <strong>Small space:</strong>
+  <br><br>
+  <div class="small">
+    <!-- #1 -->
+    <ph-animated-text-ticker separator="♫" msgs="Armin van Buuren - Communication (Part III), Bomfunk MCs - Freestyler, Kris Kross - Jump"></ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #2 -->
+    <ph-animated-text-ticker
+      animationPause="3000"
+      animationSpeed="10000"
+      msgs="YouTube Now Streams HTML5 Video By Default, Europe Gets A Cyber Security Incubator, Indian Messaging App Hike Rolls Out Free Voice-Calling Before WhatsApp">
+    </ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #3 -->
+    <ph-animated-text-ticker class="ticker" separator="/\" animationPause="3000" animationSpeed="5000"></ph-animated-text-ticker>
+  </div>
+  <br><br>
+
+  <strong>Medium space:</strong>
+  <br><br>
+  <div class="medium">
+    <!-- #1 -->
+    <ph-animated-text-ticker separator="♫" msgs="Armin van Buuren - Communication (Part III), Bomfunk MCs - Freestyler, Kris Kross - Jump"></ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #2 -->
+    <ph-animated-text-ticker
+      animationPause="3000"
+      animationSpeed="10000"
+      msgs="YouTube Now Streams HTML5 Video By Default, Europe Gets A Cyber Security Incubator, Indian Messaging App Hike Rolls Out Free Voice-Calling Before WhatsApp">
+    </ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #3 -->
+    <ph-animated-text-ticker class="ticker" separator="/\" animationPause="3000" animationSpeed="5000"></ph-animated-text-ticker>
+  </div>
+  <br><br>
+
+  <strong>Big space:</strong>
+  <br><br>
+  <div class="big">
+    <!-- #1 -->
+    <ph-animated-text-ticker separator="♫" msgs="Armin van Buuren - Communication (Part III), Bomfunk MCs - Freestyler, Kris Kross - Jump"></ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #2 -->
+    <ph-animated-text-ticker
+      animationPause="3000"
+      animationSpeed="10000"
+      msgs="YouTube Now Streams HTML5 Video By Default, Europe Gets A Cyber Security Incubator, Indian Messaging App Hike Rolls Out Free Voice-Calling Before WhatsApp">
+    </ph-animated-text-ticker>
+
+    <br>
+
+    <!-- #3 -->
+    <ph-animated-text-ticker class="ticker" separator="/\" animationPause="3000" animationSpeed="5000"></ph-animated-text-ticker>
+  </div>
+
+  <br><br>
+
+  <strong>Resize space (resize your browser window and wait until animations stop to see effect)</strong>
+  <br><br>
+  <!-- #1 -->
+  <ph-animated-text-ticker separator="♫" msgs="Armin van Buuren - Communication (Part III), Bomfunk MCs - Freestyler, Kris Kross - Jump"></ph-animated-text-ticker>
+
+  <br>
+
+  <!-- #2 -->
+  <ph-animated-text-ticker
+    animationPause="3000"
+    animationSpeed="10000"
+    msgs="YouTube Now Streams HTML5 Video By Default, Europe Gets A Cyber Security Incubator, Indian Messaging App Hike Rolls Out Free Voice-Calling Before WhatsApp">
+  </ph-animated-text-ticker>
+
+  <br>
+
+  <!-- #3 -->
+  <ph-animated-text-ticker class="ticker" separator="/\" animationPause="3000" animationSpeed="5000"></ph-animated-text-ticker>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var tickers = [].slice.call(document.querySelectorAll('.ticker'));
+
+    for (var i = 0; i < tickers.length; i++) {
+      var el = tickers[i];
+      el.addMessage('Message #1');
+      el.addMessage('Message #2');
+      el.addMessage('Message #3');
+      el.addMessage('Message #4');
+      el.addMessage('Message #5');
+      el.addMessage('Message #6');
+
+      el.removeMessage('Message #2');
+    };
+  });
+</script>
+</html>
